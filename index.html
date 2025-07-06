@@ -61,11 +61,11 @@
 
 .card {
   background-image:
-    linear-gradient(135deg, #fcd1ff 0%, transparent 70%),
-    linear-gradient(45deg, #f9f7d9 10%, transparent 80%),
-    linear-gradient(225deg, #d1f5ff 20%, transparent 70%),
-    linear-gradient(315deg, #fbc2eb 30%, transparent 80%),
-    linear-gradient(60deg, #f6e0ff 0%, transparent 85%);
+    linear-gradient(135deg, #fcd1ff 20%, rgba(252, 209, 255, 0.9) 80%),
+    linear-gradient(45deg, #f9f7d9 30%, rgba(249, 247, 217, 0.9) 90%),
+    linear-gradient(225deg, #d1f5ff 25%, rgba(209, 245, 255, 0.9) 90%),
+    linear-gradient(315deg, #fbc2eb 40%, rgba(251, 194, 235, 0.95) 100%),
+    linear-gradient(60deg, #f6e0ff 20%, rgba(246, 224, 255, 0.95) 85%);
   background-blend-mode: screen;
   background-size: 300% 300%;
   background-position: center;
@@ -74,7 +74,7 @@
   padding: 28px;
   color: #2e2e2e;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  filter: blur(0.2px);
+  filter: saturate(1.15) blur(0.2px); /* nambah saturasi dikit */
 }
 @keyframes softFlow {
   0% { background-position: 48% 52%; }
