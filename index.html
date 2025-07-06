@@ -56,24 +56,27 @@
     #f6e0ff,
     #fbc2eb
   );
-  background-size: 200% 200%;
-  animation: swirl 10s ease infinite;
+  background-size: 300% 300%;
   border-radius: 20px;
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
   padding: 24px;
-  transition: transform 0.3s ease;
   color: #2e2e2e;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  animation: dreamyMove 40s ease-in-out infinite;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-@keyframes swirl {
+@keyframes dreamyMove {
   0% {
     background-position: 0% 50%;
+    transform: scale(1);
   }
   50% {
     background-position: 100% 50%;
+    transform: scale(1.02);
   }
   100% {
     background-position: 0% 50%;
+    transform: scale(1);
   }
 }
 
