@@ -48,39 +48,46 @@
 
     .card {
   background: conic-gradient(
-    from 90deg,
+    from 180deg,
     #fcd1ff,
     #f9f7d9,
     #d1f5ff,
-    #fcd1ff,
+    #fbc2eb,
     #f6e0ff,
-    #fbc2eb
+    #fcd1ff
   );
   background-size: 300% 300%;
   border-radius: 20px;
   padding: 24px;
   color: #2e2e2e;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-  animation: dreamyMove 40s ease-in-out infinite;
+  animation: floatAbstract 60s ease-in-out infinite alternate;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  filter: blur(0.3px); /* supaya makin dreamy */
 }
 
-@keyframes dreamyMove {
+@keyframes floatAbstract {
   0% {
-    background-position: 0% 50%;
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
+    background-position: 40% 60%;
+  }
+  25% {
+    transform: scale(1.01) rotate(1deg);
+    background-position: 50% 55%;
   }
   50% {
-    background-position: 100% 50%;
-    transform: scale(1.02);
+    transform: scale(1.02) rotate(-0.5deg);
+    background-position: 45% 45%;
+  }
+  75% {
+    transform: scale(1.01) rotate(0.75deg);
+    background-position: 55% 50%;
   }
   100% {
-    background-position: 0% 50%;
-    transform: scale(1);
+    transform: scale(1) rotate(0deg);
+    background-position: 50% 60%;
   }
 }
-
-
     .card:hover {
       transform: translateY(-8px);
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
@@ -90,7 +97,6 @@
       margin-top: 0;
       color: #1c1c1c;
     }
-
     .card a {
       text-decoration: none;
       color: inherit;
