@@ -60,16 +60,17 @@
 }
 
 .card {
-  width: 100%;
+  position: relative;
+  width: 90%;
+  min-height: 100vh;
+  margin: 0 auto;
   border-radius: 48px;
-  padding: 36px;
+  padding: 48px;
   color: #2e2e2e;
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
-  position: relative;
   overflow: hidden;
 }
 
-/* Tambahkan layer animasi warna di belakang isi */
 .card::before {
   content: '';
   position: absolute;
@@ -80,11 +81,9 @@
   z-index: 0;
   opacity: 0.85;
   filter: blur(10px) saturate(1.2);
-  transition: opacity 0.5s ease;
   border-radius: inherit;
 }
 
-/* Konten tetap di atas */
 .card > * {
   position: relative;
   z-index: 1;
@@ -95,7 +94,6 @@
   50% { background-position: 100% 50%; }
   100% { background-position: 0% 50%; }
 }
-
     @@media (max-width: 768px) {
   .card {
     border-radius: 32px;
