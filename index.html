@@ -47,13 +47,36 @@
     }
 
     .card {
-      background: radial-gradient(circle at top left, #a18cd1, #fbc2eb);
-      color: #2e2e2e;
-      border-radius: 20px;
-      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
-      padding: 24px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
+  background: conic-gradient(
+    from 90deg,
+    #fcd1ff,
+    #f9f7d9,
+    #d1f5ff,
+    #fcd1ff,
+    #f6e0ff,
+    #fbc2eb
+  );
+  background-size: 200% 200%;
+  animation: swirl 10s ease infinite;
+  border-radius: 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  padding: 24px;
+  transition: transform 0.3s ease;
+  color: #2e2e2e;
+}
+
+@keyframes swirl {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
 
     .card:hover {
       transform: translateY(-8px);
